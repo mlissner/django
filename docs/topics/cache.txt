@@ -381,6 +381,10 @@ behavior. These arguments are provided as additional keys in the
   You can set ``TIMEOUT`` to ``None`` so that, by default, cache keys never
   expire. A value of ``0`` causes keys to immediately expire (effectively
   "don't cache").
+  
+  Not all backends support automatic culling of expired cache entries. When this
+  is the case, the item's timeout value will be triggered when the item is read
+  from the backend.
 
 * :setting:`OPTIONS <CACHES-OPTIONS>`: Any options that should be
   passed to the cache backend. The list of valid options will vary
