@@ -767,6 +767,9 @@ exclude::
 
     >>> AuthorFormSet = modelformset_factory(Author, exclude=('birth_date',))
 
+As with ModelForms, set ``fields`` attribute to the special value ``'__all__'`` 
+to indicate that all fields in the model should be used. 
+
 This will create a formset that is capable of working with the data associated
 with the ``Author`` model. It works just like a regular formset::
 
